@@ -19,3 +19,11 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+tasks.register('run', JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+
+    main = 'com.remitly.Main'
+
+    args 'arg1', 'arg2'
+}
